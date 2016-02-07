@@ -1,0 +1,5 @@
+<%= simple_form_for [@customer, @loan] do |f| %>
+  <%= "Enter the loan information for #{@customer.first_name}" %>
+  <%= f.input :amount %>
+  <%= f.button :submit %>
+<% end %>
