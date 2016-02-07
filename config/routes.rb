@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
+	resources :customers do
+		resources :loans do
+			resources :payments
+		end
+	end
+	
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
+  # You can have the root of your site ro:ted with "root"
   # root 'welcome#index'
 
   # Example of regular route:
@@ -54,3 +60,4 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 end
+
